@@ -4,11 +4,13 @@ on:
   push:
     branches: [main, develop]
     paths:
-      - 'backend/**'        # only runs when backend code changes
+      - 'Crowdfunding.API/**' 
+      - 'Crowfunding.API.sln'       
   pull_request:
     branches: [main]
     paths:
-      - 'backend/**'
+      - 'Crowdfunding.API/**' 
+      - 'Crowfunding.API.sln' 
 
 jobs:
   build-and-test:
@@ -22,19 +24,19 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'       # change to your .NET version
+          dotnet-version: '8.0.416'       
 
       - name: Restore dependencies
-        run: dotnet restore ./backend/
+        run: dotnet restore Crowfunding.API.sln
 
       - name: Build
-        run: dotnet build ./backend/ --no-restore --configuration Release
+        run: dotnet build Crowfunding.API.sln --no-restore --configuration Release
 
       - name: Run Tests
-        run: dotnet test ./backend/ --no-build --verbosity normal
+        run: dotnet test Crowfunding.API.sln --no-build --verbosity normal
 
       - name: Lint (Format Check)
-        run: dotnet format ./backend/ --verify-no-changes
+        run: dotnet format Crowfunding.API.sln --verify-no-changes
 
   security-scan:
     name: Security Scan
@@ -48,5 +50,5 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
-          scan-ref: './backend'
+          scan-ref: './Crowdfunding.API'
           severity: 'CRITICAL,HIGH'
