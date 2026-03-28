@@ -1,0 +1,71 @@
+MyCampaigns.css
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card {
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+ 
+  .text-center p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .modal-body p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 15px;
+    }
+  }
+  

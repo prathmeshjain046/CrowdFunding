@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Crowdfunding.API/Dockerfile
+    ports:
+      - "8080:8080" 
+      - "8081:8081"
+    environment:
+      - REACT_APP_API_BASE_URL=https://localhost:8080/api/
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:8080  
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=0  
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=CrowdfundingDB;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+
+  frontend:
+    build:
+      context: ./crowdfunding-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  sqlserver:
+    image: "mcr.microsoft.com/azure-sql-edge"  
+    container_name: sqlserver
+    restart: always
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433" 
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+volumes:
+  sqlserver_data:

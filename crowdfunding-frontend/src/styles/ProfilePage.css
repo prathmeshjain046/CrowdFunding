@@ -1,0 +1,22 @@
+.profile-card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .profile-detail {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #f8f9fa;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 20px;
+  }
+  

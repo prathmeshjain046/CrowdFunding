@@ -1,0 +1,54 @@
+
+.custom-navbar {
+    padding: 10px 20px;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa !important;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #f8d210 !important;
+  }
+  
+ 
+  .right-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .profile-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f8f9fa !important;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .profile-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Logout Button */
+  .logout-btn {
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  

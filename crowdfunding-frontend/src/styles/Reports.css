@@ -1,0 +1,214 @@
+
+.reports-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .reports-header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  
+  .summary-box {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .summary-box h4 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  .summary-box p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+ 
+  .campaign-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .campaign-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .campaign-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0056b3;
+  }
+  
+  .campaign-status {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .status-active {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .status-pending {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .status-success {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .status-failed {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+ 
+  .investments-container {
+    margin-top: 10px;
+    padding: 10px;
+    background: #eef2f7;
+    border-radius: 8px;
+  }
+  
+  .investment-item {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .investment-item:last-child {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    .reports-header {
+      font-size: 24px;
+    }
+  
+    .campaign-card {
+      padding: 12px;
+    }
+  }
+  
+
+  .report-container {
+    margin-top: 40px;
+  }
+  
+  .report-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-title {
+    font-size: 32px;
+    margin-right: 10px;
+  }
+  
+  .summary-card {
+    background: #f8f9fa;
+    border-left: 5px solid #007bff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .summary-title {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .icon-summary {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .campaign-card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .campaign-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .campaign-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-campaign {
+    font-size: 22px;
+    margin-right: 8px;
+    color: #007bff;
+  }
+  
+  .investment-table {
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .investment-table thead {
+    background: #007bff;
+    color: white;
+  }
+  
+  .investment-table tbody tr:hover {
+    background: #f1f1f1;
+  }
+  
+  .reports-title {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .table-dark {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+  
+  .badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+  

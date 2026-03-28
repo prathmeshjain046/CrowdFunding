@@ -1,0 +1,51 @@
+.investment-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    gap: 20px; 
+    padding: 20px;
+  }
+
+  .investment-heading {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 20px;
+  }
+  
+  
+  .boxy-card {
+    width: 300px;  
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .boxy-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .boxy-card .card-body {
+    padding: 15px;
+  }
+  
+  .boxy-card .pay-now-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .investment-container {
+      justify-content: flex-start; 
+    }
+  }
+  

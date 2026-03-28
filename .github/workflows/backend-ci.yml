@@ -1,0 +1,52 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'        # only runs when backend code changes
+  pull_request:
+    branches: [main]
+    paths:
+      - 'backend/**'
+
+jobs:
+  build-and-test:
+    name: Build, Lint & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'       # change to your .NET version
+
+      - name: Restore dependencies
+        run: dotnet restore ./backend/
+
+      - name: Build
+        run: dotnet build ./backend/ --no-restore --configuration Release
+
+      - name: Run Tests
+        run: dotnet test ./backend/ --no-build --verbosity normal
+
+      - name: Lint (Format Check)
+        run: dotnet format ./backend/ --verify-no-changes
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy (vulnerability scanner)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: './backend'
+          severity: 'CRITICAL,HIGH'
